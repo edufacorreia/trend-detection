@@ -1,5 +1,20 @@
-# Environment variables
-credentials.env
+# Arquivo de variáveis de ambiente com suas senhas
+# Gestão de Secrets e prevenção de Data Leakage em repositórios remotos
+.env
+*.env
 
-# Data folders
+# Pasta de dados coletados (arquivos pesados e dinâmicos)
+# Implementação de Data Decoupling: Código e dados devem viver separados
 dados/
+
+# Arquivos de sessão do Instaloader (contêm seus tokens de acesso)
+# Prevenção de Session Hijacking através da exclusão de tokens de autenticação
+session-*
+
+# Pasta temporária do Python e Bytecodes
+# Exclusão de artefatos de compilação para manter a portabilidade do repo
+__pycache__/
+
+# Checkpoints do Jupyter Notebook
+# Ignorar metadados de IDEs para evitar ruído e conflitos no histórico
+.ipynb_checkpoints/
